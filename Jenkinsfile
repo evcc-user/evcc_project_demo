@@ -26,17 +26,13 @@ pipeline {
             }
         }
 
-        stage('Build Project') {
+      stages {
+        stage('Build AURIX Project') {
             steps {
-                bat """
-                "${ADS_PATH}\\launch-tool\\launch-tool.exe" ^
-                -nosplash ^
-                -application org.eclipse.cdt.managedbuilder.core.headlessbuild ^
-                -data "C:\\Users\\admin\\Documents\\demo_project" ^
-                -build code_test/Debug
-                """
+                bat 'build_ads_project.bat'
             }
         }
+    }
 
         stage('Post Build - Output Binary Check') {
             steps {
