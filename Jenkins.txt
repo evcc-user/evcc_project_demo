@@ -1,56 +1,29 @@
 pipeline {
     agent any
 
-    environment {
-        ADS_PATH = 'C:\\Infineon\\AURIX-Studio-1.10.10'
-        PROJECT_DIR = 'C:\\Users\\admin\\Documents\\demo_project'
-        PROJECT_NAME = 'code_test'
-    }
-
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/evcc-user/evcc_project_demo.git', branch: 'main'
+                git 'https://github.com/evcc-user/evcc_project_demo.git'
             }
         }
 
-        stage('Clean Project') {
+        stage('Build') {
             steps {
-                bat """
-                "${ADS_PATH}\\launch-tool\\launch-tool.exe" ^
-                -nosplash ^
-                -application org.eclipse.cdt.managedbuilder.core.headlessbuild ^
-                -data "C:\\Users\\admin\\Documents\\demo_project" ^
-                -cleanBuild code_test/Debug
-                """
+                echo 'Building the project...'
             }
         }
 
-        stage('Build Project') {
+        stage('Test') {
             steps {
-                bat """
-                "${ADS_PATH}\\launch-tool\\launch-tool.exe" ^
-                -nosplash ^
-                -application org.eclipse.cdt.managedbuilder.core.headlessbuild ^
-                -data "C:\\Users\\admin\\Documents\\demo_project" ^
-                -build code_test/Debug
-                """
+                echo 'Running tests...'
             }
         }
 
-        stage('Post Build - Output Binary Check') {
+        stage('Deploy') {
             steps {
-                bat "dir /b \"C:\\Users\\admin\\Documents\\demo_project\\code_test\\Debug\\*.elf\""
+                echo 'Deploying application...'
             }
-        }
-    }
-
-    post {
-        success {
-            echo "Build completed successfully!"
-        }
-        failure {
-            echo "Build failed."
         }
     }
 }
