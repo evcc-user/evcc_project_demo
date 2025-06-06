@@ -1,0 +1,15 @@
+2025/06/05 09:52:17 Started Launch Tool 2.0.7
+2025/06/05 09:52:17 Started as PID 20960
+2025/06/05 09:52:17 Started with arguments []string{"C:\\Infineon\\AURIX-Studio-1.10.10\\launch-tool\\launch-tool.exe", "-vmargs", "C:\\Infineon\\AURIX-Studio-1.10.10\\plugins\\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.11.v20240426-1830\\jre\\bin\\server\\jvm.dll", "-vmargs-nosplash", "-vmargs-application", "org.eclipse.cdt.managedbuilder.core.headlessbuild", "-data", "C:\\Users\\admin\\AURIX-v1.10.10-workspace", "-build", "code_test/Debug"}
+2025/06/05 09:52:17 Started in directory C:\Users\admin\Documents\demo_project
+2025/06/05 09:52:17 Reading tool data
+2025/06/05 09:52:17 Reading "C:\\Infineon\\AURIX-Studio-1.10.10\\launch-tool\\tool-details.json"
+2025/06/05 09:52:17 Validating tool data
+2025/06/05 09:52:17 Starting tool &main.Tool{FeatureID:"com.ifx.tb.tool.aurixide", Title:"AURIX� Development Studio", Version:"1.10.10", Path:"C:\\Infineon\\AURIX-Studio-1.10.10\\AURIX-studio.exe"}
+2025/06/05 09:52:17 Starting "C:\\Infineon\\AURIX-Studio-1.10.10\\AURIX-studio.exe" with arguments []string{"-vmargs", "C:\\Infineon\\AURIX-Studio-1.10.10\\plugins\\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.11.v20240426-1830\\jre\\bin\\server\\jvm.dll", "-vmargs-nosplash", "-vmargs-application", "org.eclipse.cdt.managedbuilder.core.headlessbuild", "-data", "C:\\Users\\admin\\AURIX-v1.10.10-workspace", "-build", "code_test/Debug"}
+2025/06/05 09:52:17 Starting "C:\\Infineon\\AURIX-Studio-1.10.10\\AURIX-studio.exe" in directory "C:\\Infineon\\AURIX-Studio-1.10.10"
+2025/06/05 09:52:17 Started "C:\\Infineon\\AURIX-Studio-1.10.10\\AURIX-studio.exe" as PID 5824
+2025/06/05 09:52:17 Starting Launcher Service
+2025/06/05 09:52:17 Starting "C:\\Infineon\\LauncherService\\idc-launcher-service.exe" with arguments []string{"-featureid", "com.ifx.tb.tool.aurixide:1.10.10", "-notification", "-toolbox.service", "checkUpdate com.ifx.tb.tool.aurixide"}
+2025/06/05 09:52:17 Starting "C:\\Infineon\\LauncherService\\idc-launcher-service.exe" in directory "C:\\Infineon\\LauncherService"
+2025/06/05 09:52:17 Started "C:\\Infineon\\LauncherService\\idc-launcher-service.exe" as PID 1744
